@@ -74,3 +74,11 @@ kind: Service
 metadata:
   name: hello-world
 spec:
+  selector:
+    app: hello-world
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 31080
+  type: NodePort
